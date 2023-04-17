@@ -12,7 +12,8 @@ Sample:
     "targets": [
         {
             "input": "testdata.txt",
-            "output": "anime.rss"
+            "output": "anime.rss",
+            "target": "subsplease"
         }
     ]
 }
