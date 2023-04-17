@@ -1,7 +1,8 @@
 #!/bin/sh
 
 echo "Updating..."
-git pull
+git fetch --all
+git reset --hard origin/master
 
 echo "Launching..."
 python ./mkRSS.py
