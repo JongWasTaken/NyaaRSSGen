@@ -42,5 +42,8 @@ WORKDIR /app
 RUN mkdir -p /app/exposed
 RUN mkdir -p /app/web
 VOLUME /app/exposed
+ENV PORT=6969
+ENV TIME=3600
 CMD ["./launch.sh"]
-```
+```  
+Since this repository is private, a GitHub PAT with sufficient rights is required to clone it.
