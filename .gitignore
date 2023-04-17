@@ -1,2 +1,7 @@
 web/*
 *.rss
+*.txt
+exposed/*
+./exposed/*
+exposed/
+./exposed/
