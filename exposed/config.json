@@ -1,0 +1,8 @@
+{
+    "targets": [
+        {
+            "input": "testdata.txt",
+            "output": "anime.rss"
+        }
+    ]
+}
