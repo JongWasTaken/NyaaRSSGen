@@ -24,3 +24,16 @@ The port and time interval can be adjusted using environment variables:
 |--|--|--|
 |PORT|6969|Port for the web server|
 |TIME|1800|Interval in seconds|
+
+## Example Dockerfile
+```
+FROM python:3.10-bullseye
+RUN apt-get -y update
+RUN apt-get -y install git
+RUN git clone https://JongWasTaken:GITHUB_PAT_GOES_HERE@github.com/JongWasTaken/NyaaRSSGen /app
+WORKDIR /app
+RUN mkdir -p /app/exposed
+RUN mkdir -p /app/web
+VOLUME /app/exposed
+CMD ["./launch.sh"]
+```
