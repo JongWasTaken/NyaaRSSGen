@@ -96,5 +96,11 @@ def dlRSS():
         print("finished working on target output: " + target["output"])
     print("finished interval")
 
+def checkManualFile():
+    if os.path.exists("./exposed/trigger"):
+        os.remove("./exposed/trigger")
+        dlRSS()
+
 dlRSS()
 setInterval(dlRSS,time)
+setInterval(checkManualFile, 60)
