@@ -75,7 +75,7 @@ def dlRSS():
 
         rss = rss[:-1]
         rss = urllib.parse.quote(rss)
-        rss = "https://nyaa.si/?page=rss&q=" + rss + "+-Batch+1080p&c=1_2&f=2&u=subsplease"
+        rss = "https://nyaa.si/?page=rss&q=" + rss + "+-Batch+1080p&c=1_2&f=0&u=" + target["target"]
 
         try:
             fid = urllib.request.urlopen(url=rss,timeout=3)
