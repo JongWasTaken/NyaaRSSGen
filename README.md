@@ -26,6 +26,12 @@ The port and time interval can be adjusted using environment variables:
 |PORT|6969|Port for the web server|
 |TIME|1800|Interval in seconds|
 
+## Manual Trigger
+If you do not want to wait for the next interval, simply create a file named `trigger` in `/app/exposed`.
+This is useful when testing new input files.  
+`touch /mnt/smb/Docker/rss/trigger`  
+The script checks for this file every 60 seconds, and if it exists, it gets deleted and all rss feeds get rechecked.
+
 ## Example Dockerfile
 ```
 FROM python:3.10-bullseye
