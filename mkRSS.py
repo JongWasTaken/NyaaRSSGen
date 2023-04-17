@@ -58,16 +58,16 @@ def dlRSS():
         print("no config found!")
         return;
 
-    for target in config.targets:
-        print("working on target output: " + target.output)
+    for target in config["targets"]:
+        print("working on target output: " + target["output"])
         print("assembling rss string")
         rss = ""
 
-        if not os.path.exists("./exposed/" + target.input):
-            print("target.input does not exist! check your config?")
+        if not os.path.exists("./exposed/" + target["input"]):
+            print("target[\"input\"] does not exist! check your config?")
             return;
 
-        file = open("./exposed/" + target.input, 'r')
+        file = open("./exposed/" + target["input"], 'r')
         for line in file.readlines():
             if line[0] != "#" and line.strip() != "":
                 rss = rss + "\"" + line.strip() + "\"|"
@@ -87,12 +87,14 @@ def dlRSS():
 
         print("writing rss file")
         try:
-            file = open("./web/" + target.output, "w")
+            file = open("./web/" + target["output"], "w")
             file.write(webpage)
             file.close()
         except:
             print("error while writing rss file")
             return;
+        print("finished working on target output: " + target["output"])
+    print("finished interval")
 
 dlRSS()
 setInterval(dlRSS,time)
