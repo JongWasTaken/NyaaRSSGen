@@ -1,9 +1,0 @@
-{
-    "targets": [
-        {
-            "input": "testdata.txt",
-            "output": "anime.rss",
-            "target": "subsplease"
-        }
-    ]
-}
