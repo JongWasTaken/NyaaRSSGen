@@ -13,7 +13,9 @@ Sample:
         {
             "input": "testdata.txt",
             "output": "anime.rss",
-            "target": "subsplease"
+            "username": "subsplease",
+            "category": "1_2",
+            "quality": "1080p"
         }
     ]
 }
