@@ -83,7 +83,7 @@ def dlRSS():
         elif target["quality"] == "none":
             rss = rss + ""
         else:
-            rss = rss + target["quality"]
+            rss = rss + "+" + target["quality"]
 
         if target["category"] == "":
             rss = rss + "&c=1_2&f=0"
