@@ -75,7 +75,23 @@ def dlRSS():
 
         rss = rss[:-1]
         rss = urllib.parse.quote(rss)
-        rss = "https://nyaa.si/?page=rss&q=" + rss + "+-Batch+1080p&c=1_2&f=0&u=" + target["target"]
+        rss = "https://nyaa.si/?page=rss&q=" + rss
+        rss = rss + "+-Batch"
+
+        if target["quality"] == "":
+            rss = rss + "+1080p"
+        elif target["quality"] == "none":
+            rss = rss + ""
+        else:
+            rss = rss + target["quality"]
+
+        if target["category"] == "":
+            rss = rss + "&c=1_2&f=0"
+        else:
+            rss = rss + "&c="+ target["category"] +"&f=0"
+
+        if target["username"] != "":
+            rss = rss + "&u=" + target["username"]
 
         try:
             fid = urllib.request.urlopen(url=rss,timeout=3)
