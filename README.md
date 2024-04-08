@@ -25,7 +25,7 @@ Example:
 All keys need to be present.  
 Leave `username` empty for `Anonymous` uploads.  
 If `category` is empty, `Anime - English translated` is assumed (`1_2`).  
-If `quality` is empty, `1080p` is assumed.`
+If `quality` is empty, `1080p` is assumed.
 
 ## Input file
 Example (Winter 2023):  
