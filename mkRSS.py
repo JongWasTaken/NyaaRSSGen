@@ -94,7 +94,7 @@ def dlRSS():
             rss = rss + "&u=" + target["username"]
 
         try:
-            fid = urllib.request.urlopen(url=rss,timeout=3)
+            fid = urllib.request.urlopen(url=rss,timeout=10)
         except:
             print("connection error!")
             return;
